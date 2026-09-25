@@ -1,0 +1,4 @@
+---
+import Layout from '../layouts/Layout.astro';import CVDownload from '../components/CVDownload.astro';import {profile,contact} from '../lib/content';
+---
+<Layout title="Contact | Juhyung Kim"><div class="page-heading"><p class="eyebrow">GET IN TOUCH</p><h1>Contact</h1><p>Academic correspondence and research connections.</p></div><section class="contact-section"><div><h2>{profile.name}</h2><p>{profile.affiliation}</p></div><dl><div><dt>Email</dt><dd>{contact.email?<a href={'mailto:'+contact.email}>{contact.email} ↗</a>:<span class="muted">Email address forthcoming</span>}</dd></div>{contact.scholar&&<div><dt>Google Scholar</dt><dd><a href={contact.scholar}>View profile ↗</a></dd></div>}{contact.orcid&&<div><dt>ORCID</dt><dd><a href={contact.orcid}>View researcher record ↗</a></dd></div>}<div><dt>Curriculum vitae</dt><dd><CVDownload compact/></dd></div></dl></section></Layout>

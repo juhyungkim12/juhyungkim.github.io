@@ -1,0 +1,338 @@
+media:
+  input: public/media
+  output: /media
+content:
+  - name: profile
+    label: Home / Profile
+    type: file
+    path: src/data/profile.json
+    format: json
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: affiliation
+        label: Affiliation
+        type: string
+      - name: introduction
+        label: Introduction
+        type: text
+      - name: interests
+        label: Research interests
+        type: string
+        list: true
+      - name: portrait
+        label: Portrait
+        type: image
+      - name: portraitAlt
+        label: Portrait description
+        type: string
+      - name: video
+        label: MP4 video
+        type: file
+        options:
+          extensions:
+            - mp4
+      - name: poster
+        label: Video poster / fallback
+        type: image
+      - name: caption
+        label: Featured video caption
+        type: string
+  - name: education
+    label: Education
+    type: file
+    path: src/data/education.json
+    format: json
+    fields:
+      - name: entries
+        label: Entries
+        type: object
+        list:
+          collapsible:
+            summary: "{title}{name}"
+            collapsed: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: institution
+            label: Institution / organization
+            type: string
+          - name: date
+            label: Date or period
+            type: string
+          - name: description
+            label: Description
+            type: text
+  - name: awards
+    label: Honors & Awards
+    type: file
+    path: src/data/awards.json
+    format: json
+    fields:
+      - name: entries
+        label: Entries
+        type: object
+        list:
+          collapsible:
+            summary: "{title}{name}"
+            collapsed: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: institution
+            label: Institution / organization
+            type: string
+          - name: date
+            label: Date or period
+            type: string
+          - name: description
+            label: Description
+            type: text
+  - name: research
+    label: Research Experience
+    type: file
+    path: src/data/research.json
+    format: json
+    fields:
+      - name: entries
+        label: Entries
+        type: object
+        list:
+          collapsible:
+            summary: "{title}{name}"
+            collapsed: true
+        fields:
+          - name: id
+            label: Unique ID
+            type: string
+          - name: title
+            label: Research title
+            type: string
+          - name: order
+            label: Display order (lower first)
+            type: number
+          - name: placeholder
+            label: Example placeholder
+            type: boolean
+          - name: summary
+            label: Overview
+            type: text
+          - name: approach
+            label: Research approach
+            type: text
+          - name: results
+            label: Key results
+            type: text
+          - name: image
+            label: Representative image
+            type: image
+          - name: video
+            label: MP4 video
+            type: file
+            options:
+              extensions:
+                - mp4
+          - name: alt
+            label: Image / video description
+            type: string
+          - name: caption
+            label: Caption
+            type: string
+          - name: media
+            label: Additional media
+            type: object
+            list: true
+            fields:
+              - name: image
+                label: Representative image
+                type: image
+              - name: video
+                label: MP4 video
+                type: file
+                options:
+                  extensions:
+                    - mp4
+              - name: alt
+                label: Image / video description
+                type: string
+              - name: caption
+                label: Caption
+                type: string
+          - name: related
+            label: Related publication IDs
+            type: string
+            list: true
+  - name: publications
+    label: Publications
+    type: file
+    path: src/data/publications.json
+    format: json
+    fields:
+      - name: entries
+        label: Entries
+        type: object
+        list:
+          collapsible:
+            summary: "{title}{name}"
+            collapsed: true
+        fields:
+          - name: demo
+            label: Demo / placeholder entry (turn off after replacing all sample details)
+            type: boolean
+          - name: id
+            label: Unique ID
+            type: string
+          - name: title
+            label: Paper title
+            type: string
+          - name: authors
+            label: Authors (include Juhyung Kim exactly)
+            type: text
+          - name: journal
+            label: Journal / venue
+            type: string
+          - name: year
+            label: Year
+            type: number
+          - name: details
+            label: Volume / issue / pages
+            type: string
+          - name: doi
+            label: DOI (identifier or https URL)
+            type: string
+          - name: pdf
+            label: PDF
+            type: file
+            options:
+              extensions:
+                - pdf
+          - name: image
+            label: Representative image
+            type: image
+          - name: alt
+            label: Image / video description
+            type: string
+          - name: featured
+            label: Featured on Home
+            type: boolean
+          - name: type
+            label: Publication type
+            type: select
+            options:
+              values:
+                - Journal Articles
+                - Conference Proceedings
+                - Conference Presentations
+                - Preprints
+          - name: status
+            label: Publication status
+            type: select
+            options:
+              values:
+                - Published
+                - Accepted
+                - Under Review
+                - Preprint
+          - name: order
+            label: Display order (lower first)
+            type: number
+  - name: skills
+    label: Skills
+    type: file
+    path: src/data/skills.json
+    format: json
+    fields:
+      - name: entries
+        label: Entries
+        type: object
+        list:
+          collapsible:
+            summary: "{title}{name}"
+            collapsed: true
+        fields:
+          - name: name
+            label: Skill name
+            type: string
+          - name: category
+            label: Category
+            type: select
+            options:
+              values:
+                - Simulation & Design
+                - Fabrication
+                - Characterization
+                - Programming & Data Processing
+          - name: order
+            label: Display order (lower first)
+            type: number
+          - name: placeholder
+            label: Example placeholder
+            type: boolean
+          - name: description
+            label: Description
+            type: text
+          - name: image
+            label: Representative image
+            type: image
+          - name: video
+            label: MP4 video
+            type: file
+            options:
+              extensions:
+                - mp4
+          - name: alt
+            label: Image / video description
+            type: string
+          - name: caption
+            label: Caption
+            type: string
+          - name: media
+            label: Additional media
+            type: object
+            list: true
+            fields:
+              - name: image
+                label: Representative image
+                type: image
+              - name: video
+                label: MP4 video
+                type: file
+                options:
+                  extensions:
+                    - mp4
+              - name: alt
+                label: Image / video description
+                type: string
+              - name: caption
+                label: Caption
+                type: string
+  - name: contact
+    label: Contact Information
+    type: file
+    path: src/data/contact.json
+    format: json
+    fields:
+      - name: email
+        label: Email address
+        type: string
+      - name: scholar
+        label: Google Scholar URL
+        type: string
+      - name: orcid
+        label: ORCID URL
+        type: string
+  - name: cv
+    label: CV PDF
+    type: file
+    path: src/data/cv.json
+    format: json
+    fields:
+      - name: file
+        label: CV PDF
+        type: file
+        options:
+          extensions:
+            - pdf

@@ -1,0 +1,5 @@
+---
+const links=[['/','Home'],['/publications/','Publications'],['/research/','Research Experience'],['/skills/','Skills'],['/contact/','Contact']];
+---
+<header class="site-header"><div class="header-inner"><a class="wordmark" href="/">Juhyung Kim<span>MECHANICAL ENGINEERING</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">＋</span></button><nav id="navigation" aria-label="Main navigation">{links.map(([url,label])=><a href={url} aria-current={Astro.url.pathname===url?'page':undefined}>{label}</a>)}</nav></div></header>
+<script>const button=document.querySelector<HTMLButtonElement>('.menu-toggle');const nav=document.querySelector('nav');button?.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));nav?.classList.toggle('open',open)});document.addEventListener('keydown',e=>{if(e.key==='Escape'){button?.setAttribute('aria-expanded','false');nav?.classList.remove('open')}});</script>

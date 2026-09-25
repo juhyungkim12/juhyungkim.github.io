@@ -1,0 +1,4 @@
+---
+import Layout from '../layouts/Layout.astro';import ResearchSection from '../components/ResearchSection.astro';import {research} from '../lib/content';
+---
+<Layout title="Research Experience | Juhyung Kim"><div class="page-heading"><p class="eyebrow">RESEARCH PORTFOLIO</p><h1>Research experience</h1><p>Projects, approaches, and experimental work.</p></div>{research.map((project,index)=><ResearchSection project={project} index={index}/>)}</Layout>

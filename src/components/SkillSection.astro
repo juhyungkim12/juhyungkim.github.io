@@ -1,0 +1,4 @@
+---
+import type {Skill} from '../lib/content';import Media from './Media.astro';const {skill}=Astro.props as {skill:Skill};
+---
+<article class="skill"><Media image={skill.image} video={skill.video} alt={skill.alt} label="Technical media to be added"/>{skill.placeholder&&<p class="eyebrow muted">CONTENT PLACEHOLDER</p>}<h3>{skill.name}</h3><p>{skill.description}</p>{skill.media?.map(media=><Media {...media}/>)}</article>

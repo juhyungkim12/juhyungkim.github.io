@@ -1,0 +1,21 @@
+{
+  "entries": [
+    {
+      "id": "demo-publication",
+      "demo": true,
+      "title": "Sample paper title: Design and characterization of a microscale system",
+      "authors": "First Author, Juhyung Kim, and Coauthor Name",
+      "journal": "Example Journal — placeholder",
+      "year": 2026,
+      "details": "Volume XX, Issue X, pp. XX–XX",
+      "doi": "",
+      "pdf": "",
+      "image": "",
+      "alt": "Representative publication image placeholder",
+      "featured": true,
+      "type": "Journal Articles",
+      "status": "",
+      "order": 1
+    }
+  ]
+}

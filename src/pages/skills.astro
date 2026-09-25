@@ -1,0 +1,4 @@
+---
+import Layout from '../layouts/Layout.astro';import SkillSection from '../components/SkillSection.astro';import {skills} from '../lib/content';const categories=[...new Set(skills.map(s=>s.category))];
+---
+<Layout title="Skills | Juhyung Kim"><div class="page-heading"><p class="eyebrow">TECHNICAL PORTFOLIO</p><h1>Skills &amp; methods</h1><p>A space for practical engineering experience and experimental techniques.</p></div>{categories.map((category,i)=><section class="section"><div class="section-heading"><h2>{category}</h2><span class="section-number">{String(i+1).padStart(2,'0')}</span></div><div class="skills-grid">{skills.filter(s=>s.category===category).map(skill=><SkillSection skill={skill}/>)}</div></section>)}</Layout>

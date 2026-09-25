@@ -1,0 +1,9 @@
+---
+import type {Media} from '../lib/content';
+interface Props extends Media {label?:string;featured?:boolean}
+const {image,video,alt='',caption,label='Research media to be added',featured=false}=Astro.props;
+---
+<figure class:list={['media',{'featured-media':featured}]}>{video?<div class="video-wrap"><video muted loop playsinline preload="none" poster={image||undefined} aria-label={alt||label} data-featured={featured?'true':undefined} controls={!featured}><source src={video} type="video/mp4"/>Your browser does not support this video.</video>{featured&&<button class="video-toggle" type="button" aria-label="Play research video">Play video</button>}</div>:image?<img src={image} alt={alt} loading={featured?'eager':'lazy'} width="1200" height="800"/>:<div class="media-placeholder"><span class="placeholder-mark" aria-hidden="true">＋</span><span>{label}</span><small>MEDIA PLACEHOLDER</small></div>}{caption&&<figcaption>{caption}</figcaption>}</figure>
+<script>
+for(const video of document.querySelectorAll<HTMLVideoElement>('video[data-featured]')){const button=video.parentElement?.querySelector<HTMLButtonElement>('button');const preference=matchMedia('(prefers-reduced-motion: reduce)');const sync=()=>{if(button){button.textContent=video.paused?'Play video':'Pause video';button.setAttribute('aria-label',video.paused?'Play research video':'Pause research video')}};const apply=()=>{video.autoplay=!preference.matches;if(preference.matches)video.pause();else video.play().catch(()=>{});sync()};button?.addEventListener('click',()=>{if(video.paused)video.play().catch(()=>{});else video.pause()});video.addEventListener('play',sync);video.addEventListener('pause',sync);preference.addEventListener('change',apply);apply();}
+</script>

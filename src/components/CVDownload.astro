@@ -1,0 +1,4 @@
+---
+import {cv} from '../lib/content';const {compact=false}=Astro.props;
+---
+{compact?(cv.file?<a class="button" href={cv.file} download>Download CV <span aria-hidden="true">↓</span></a>:<span class="unavailable">CV forthcoming</span>):<section class="cv-section"><div><p class="eyebrow">CURRICULUM VITAE</p><h2>Academic background, at a glance.</h2><p>A record of education, research, and academic activities.</p></div>{cv.file?<a class="button" href={cv.file} download>Download CV · PDF <span aria-hidden="true">↓</span></a>:<span class="unavailable">CV will be added soon</span>}</section>}

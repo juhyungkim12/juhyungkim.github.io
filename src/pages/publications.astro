@@ -1,0 +1,4 @@
+---
+import Layout from '../layouts/Layout.astro';import PublicationItem from '../components/PublicationItem.astro';import {publications} from '../lib/content';const types=['Journal Articles','Conference Proceedings','Conference Presentations','Preprints'];
+---
+<Layout title="Publications | Juhyung Kim"><div class="page-heading"><p class="eyebrow">ACADEMIC OUTPUT</p><h1>Publications</h1><p>Journal articles, conference contributions, and preprints.</p></div>{publications.length?types.map(type=>{const items=publications.filter(p=>p.type===type);return items.length>0&&<section class="section publication-group"><h2>{type}</h2>{items.map(publication=><PublicationItem publication={publication}/>)}</section>}):<div class="empty-state publication-empty"><span class="eyebrow">PUBLICATION RECORD</span><h2>Publications will be added here.</h2><p>Verified citations and accompanying research images will be listed as they become available.</p></div>}</Layout>

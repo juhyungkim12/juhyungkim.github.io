@@ -1,0 +1,49 @@
+{
+  "entries": [
+    {
+      "id": "research-1",
+      "title": "Intelligent Microfabrication",
+      "order": 1,
+      "placeholder": true,
+      "summary": "Research overview to be added. This is an editable example section, not a claim of completed work.",
+      "approach": "",
+      "results": "",
+      "image": "",
+      "video": "",
+      "alt": "",
+      "caption": "",
+      "media": [],
+      "related": []
+    },
+    {
+      "id": "research-2",
+      "title": "Magnetic Microrobotics",
+      "order": 2,
+      "placeholder": true,
+      "summary": "Research overview to be added. This is an editable example section, not a claim of completed work.",
+      "approach": "",
+      "results": "",
+      "image": "",
+      "video": "",
+      "alt": "",
+      "caption": "",
+      "media": [],
+      "related": []
+    },
+    {
+      "id": "research-3",
+      "title": "Soft Robotics",
+      "order": 3,
+      "placeholder": true,
+      "summary": "Research overview to be added. This is an editable example section, not a claim of completed work.",
+      "approach": "",
+      "results": "",
+      "image": "",
+      "video": "",
+      "alt": "",
+      "caption": "",
+      "media": [],
+      "related": []
+    }
+  ]
+}

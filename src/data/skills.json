@@ -1,0 +1,48 @@
+{
+  "entries": [
+    {
+      "name": "Simulation & Design",
+      "category": "Simulation & Design",
+      "order": 1,
+      "placeholder": true,
+      "description": "Technical experience and representative media will be added here.",
+      "image": "",
+      "video": "",
+      "alt": "",
+      "media": []
+    },
+    {
+      "name": "Fabrication",
+      "category": "Fabrication",
+      "order": 2,
+      "placeholder": true,
+      "description": "Technical experience and representative media will be added here.",
+      "image": "",
+      "video": "",
+      "alt": "",
+      "media": []
+    },
+    {
+      "name": "Characterization",
+      "category": "Characterization",
+      "order": 3,
+      "placeholder": true,
+      "description": "Technical experience and representative media will be added here.",
+      "image": "",
+      "video": "",
+      "alt": "",
+      "media": []
+    },
+    {
+      "name": "Programming & Data Processing",
+      "category": "Programming & Data Processing",
+      "order": 4,
+      "placeholder": true,
+      "description": "Technical experience and representative media will be added here.",
+      "image": "",
+      "video": "",
+      "alt": "",
+      "media": []
+    }
+  ]
+}

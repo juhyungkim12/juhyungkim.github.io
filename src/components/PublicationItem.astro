@@ -1,0 +1,25 @@
+---
+import type { Publication } from '../lib/content';
+import Media from './Media.astro';
+const { publication: p } = Astro.props as { publication: Publication };
+const parts = p.authors.split(/(Juhyung Kim)/g);
+const doi = p.doi?.startsWith('https://') ? p.doi : p.doi ? 'https://doi.org/' + p.doi : undefined;
+---
+<article class="publication" id={p.id}>
+  <Media image={p.image} alt={p.alt || 'Representative image for ' + p.title} label={p.demo ? 'Representative image placeholder' : 'Publication image'} />
+  <div>
+    <div class="publication-meta">
+      {p.demo && <span class="demo-badge">DEMO · PLACEHOLDER</span>}
+      {p.year && <span>{p.year}{p.demo ? ' · example year' : ''}</span>}
+      {p.status && <span>{p.status}</span>}
+    </div>
+    <h3>{p.title}</h3>
+    <p class="authors">{parts.map(part => part === 'Juhyung Kim' ? <strong>{part}</strong> : part)}</p>
+    {p.journal && <p><em>{p.journal}</em>{p.details && ', ' + p.details}</p>}
+    <div class="text-links">
+      {doi ? <a href={doi}>DOI ↗</a> : p.demo && <a href={'#' + p.id + '-note'}>DOI · demo link ↗</a>}
+      {p.pdf && <a href={p.pdf}>PDF ↓</a>}
+    </div>
+    {p.demo && <p class="demo-note" id={p.id + '-note'}>Layout preview only — not a real publication. All citation details are examples; a real DOI and optional PDF can be added when this entry is replaced.</p>}
+  </div>
+</article>
