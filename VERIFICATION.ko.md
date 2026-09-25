@@ -24,11 +24,12 @@ GitHub Actions의 실제 배포 및 Pages CMS의 계정 연결·저장 동작은
 
 ## GitHub 계정 변경 검증
 
-- GitHub 계정: juhyungkim
-- 저장소: juhyungkim.github.io
-- 사이트: https://juhyungkim.github.io
+- GitHub 계정: juhyungkim12
+- 저장소: juhyungkim12.github.io
+- 사이트: https://juhyungkim12.github.io
 - Astro 정적 빌드 및 타입 검사 성공
 - 6개 HTML 페이지의 canonical 및 og:url이 새 도메인으로 생성됨
 - main 자동 배포, Pages 권한, dist 업로드 및 배포 작업 연결 확인
 - 전달 소스와 설정에서 이전 계정명이 남아 있지 않음
 - GitHub 업로드, 저장소 이름 변경 및 실제 배포는 실행하지 않음
+
