@@ -1,1 +1,22 @@
-{"name":"juhyung-academic-website","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"astro dev --host 127.0.0.1","build":"astro check && astro build","preview":"astro preview --host 127.0.0.1","validate":"node scripts/validate.mjs"},"dependencies":{"@fontsource/inter":"^5.2.0","astro":"^7.3.5"},"devDependencies":{"@astrojs/check":"^0.9.4","typescript":"^5.9.0","yaml":"^2.8.0"}}
+{
+  "name": "juhyung-academic-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro check && astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "validate": "node scripts/validate.mjs",
+    "test:cms": "node scripts/test-cms.mjs"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.0",
+    "astro": "^7.3.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.9.0",
+    "yaml": "^2.8.0"
+  }
+}
