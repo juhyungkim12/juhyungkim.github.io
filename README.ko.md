@@ -25,12 +25,12 @@ npm run preview
 
 이 프로젝트는 아직 GitHub에 업로드되지 않았습니다. 계정 설정도 변경하지 않았습니다.
 
-1. GitHub에서 `juhyeoung12-lgtm` 계정으로 로그인합니다.
-2. 이름이 정확히 `juhyeoung12-lgtm.github.io`인 공개 저장소를 생성합니다. 같은 이름의 기존 저장소가 있다면 삭제하거나 덮어쓰지 말고 먼저 내용을 확인하세요.
+1. GitHub에서 `juhyungkim` 계정으로 로그인합니다.
+2. 이름이 정확히 `juhyungkim.github.io`인 공개 저장소를 생성합니다. 같은 이름의 기존 저장소가 있다면 삭제하거나 덮어쓰지 말고 먼저 내용을 확인하세요.
 3. GitHub Desktop에서 이 프로젝트 폴더를 로컬 저장소로 추가하고, 파일을 커밋한 뒤 해당 저장소의 `main` 브랜치에 게시합니다. `.github`, `.pages.yml`, `package-lock.json`을 포함하고, `node_modules`, `.tools`, `dist`는 제외합니다. 숨김 파일 누락을 막기 위해 GitHub Desktop을 권장합니다.
 4. 저장소의 **Settings → Pages → Build and deployment → Source**에서 **GitHub Actions**를 선택합니다.
 5. **Actions → Deploy academic website**에서 성공 여부를 확인합니다. 최초 푸시 시 설정이 완료되지 않았다면 **Run workflow**로 다시 실행하세요.
-6. 완료 후 https://juhyeoung12-lgtm.github.io 에서 확인합니다.
+6. 완료 후 https://juhyungkim.github.io 에서 확인합니다.
 
 이후 `main` 브랜치 변경마다 자동으로 빌드·검증·배포됩니다. 이 주소는 사용자 루트 사이트이므로 별도 repository base 경로를 설정하지 않습니다. 빌드 실패 시 이전 배포는 유지됩니다.
 
@@ -88,3 +88,14 @@ Pages CMS → Publications에서 데모 항목의 제목·저자·학술지·연
 ## 홈 소개 섹션 변경
 
 About Me 섹션과 해당 CMS 메뉴는 제거되었습니다. 홈 프로필 다음에 Education이 표시됩니다. 기존 소개 데이터는 src/data/about.json에 보관되어 있지만 화면에 표시되지 않습니다.
+
+## GitHub 사용자명 변경 후 확인
+
+- 계정: juhyungkim
+- 저장소: juhyungkim.github.io
+- 저장소 주소: https://github.com/juhyungkim/juhyungkim.github.io
+- 사이트 주소: https://juhyungkim.github.io
+
+기존 저장소를 사용한다면 GitHub의 저장소 Settings에서 이름을 juhyungkim.github.io로 변경하세요. Settings → Pages의 Source는 GitHub Actions로 설정합니다. Pages CMS에서도 새 계정의 저장소와 main 브랜치를 선택하고 필요한 접근 권한을 확인하세요. 사용자 루트 사이트이므로 Astro base에 저장소 이름을 추가하지 않습니다. canonical 및 Open Graph URL은 astro.config.mjs의 site 설정을 자동으로 사용합니다.
+
+현재 전달 프로젝트는 로컬 Git 저장소가 아니어서 원격 주소는 설정되어 있지 않습니다. 이미 Git 저장소로 관리하는 별도 사본이 있다면 해당 폴더에서 원격 주소를 확인하고 새 저장소 주소로 변경하세요.
