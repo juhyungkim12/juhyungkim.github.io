@@ -1,20 +1,17 @@
 {
   "entries": [
     {
-      "id": "demo-publication",
       "demo": true,
-      "title": "Sample paper title: Design and characterization of a microscale system",
-      "authors": "First Author, Juhyung Kim, and Coauthor Name",
-      "journal": "Example Journal — placeholder",
+      "id": "demo-publication",
+      "title": "An Origami-Based Cable-Climbing Soft Robot",
+      "authors": "Juhyung Kim, Xiuxian Shi, and Wei Dawid Wang",
+      "journal": "Soft Robotics",
       "year": 2026,
-      "details": "Volume XX, Issue X, pp. XX–XX",
-      "doi": "",
-      "pdf": "",
-      "image": "",
+      "details": "Volume 13, Issue 4",
+      "doi": "https://doi.org/10.1177/21695172251407827",
       "alt": "Representative publication image placeholder",
       "featured": true,
       "type": "Journal Articles",
-      "status": "",
       "order": 1
     }
   ]
